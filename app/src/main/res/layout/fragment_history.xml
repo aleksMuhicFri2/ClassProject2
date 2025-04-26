@@ -1,0 +1,281 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Yesterday's Activity Section -->
+    <TextView
+        android:id="@+id/text_yesterday_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="16dp"
+        android:text="Yesterday's Activity"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <!-- Activity Data (left) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Idle Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Idle activity icon"
+                    android:src="@drawable/idle_icon" />
+
+                <TextView
+                    android:id="@+id/text_idle_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Walking Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Walking activity icon"
+                    android:src="@drawable/walking_icon" />
+
+
+                <TextView
+                    android:id="@+id/text_walking_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Running Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Running activity icon"
+                    android:src="@drawable/running_icon" />
+
+                <TextView
+                    android:id="@+id/text_running_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Cycling Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Cycling activity icon"
+                    android:src="@drawable/cycling_icon" />
+
+                <TextView
+                    android:id="@+id/text_cycling_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Step Count for Yesterday (on the right side) -->
+        <TextView
+            android:id="@+id/text_step_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.1"
+            android:paddingTop="16dp"
+            android:text="Steps: 10000"
+            android:textSize="23sp" />
+    </LinearLayout>
+
+    <!-- This Week's Activity Section -->
+    <TextView
+        android:id="@+id/text_this_week_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="16dp"
+        android:text="This Week's Activity"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Activity Data (left) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <!-- Idle Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:src="@drawable/idle_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Idle activity icon"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/text_idle_time_Weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Walking Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:src="@drawable/walking_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Walking activity icon"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/text_walking_time_Weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Running Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:src="@drawable/running_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Running activity icon"
+                    android:layout_marginEnd="8dp" />
+
+
+                <TextView
+                    android:id="@+id/text_running_time_Weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Cycling Activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:src="@drawable/cycling_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Cycling activity icon"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/text_cycling_time_Weekly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: 30 mins"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Step Count for This Week (on the right side) -->
+        <TextView
+            android:id="@+id/text_step_count_Weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.1"
+            android:paddingTop="16dp"
+            android:text="Steps: 10000"
+            android:textSize="23sp" />
+    </LinearLayout>
+</LinearLayout>

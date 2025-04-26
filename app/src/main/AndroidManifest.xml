@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Used Features -->
+    <uses-feature android:name="android.hardware.sensor.stepcounter" android:required="true" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true" />
+    <uses-feature android:name="android.hardware.sensor.linear_acceleration" android:required="true"/>
+
+    <!-- Required Permissions -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_HEALTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_icon_desktop"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClassProject2">
+
+        <meta-data
+            android:name="com.google.android.gms.location_base"
+            android:value="true" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Sensing Service -->
+        <service
+            android:name=".SensingService"
+            android:foregroundServiceType="health"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- ActivityRecognitionReceiver -->
+        <receiver android:name=".ActivityRecognitionReceiver"
+            android:exported="false" />
+
+        <!-- MidnightResetReceiver -->
+        <receiver android:name=".MidnightResetReceiver"
+            android:exported="false" />
+
+        <!-- ReminderAlarmReceiver -->
+        <receiver android:name=".ReminderAlarmReceiver"
+            android:enabled="true"
+            android:exported="false"/>
+
+    </application>
+</manifest>

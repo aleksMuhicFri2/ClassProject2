@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ClassProject2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="dashboard_header">Activity Graph</string>
+    <string name="walking_icon">Walking</string>
+    <string name="running_icon">Running</string>
+    <string name="cycling_icon">Cycling</string>
+    <string name="idle_icon">Idle</string>
+    <string name="steps_taken">Steps Taken: %d</string>
+    <string name="avg_acceleration_running">Average Acceleration Running: %.2f m/s²</string>
+    <string name="avg_acceleration_cycling">Average Acceleration Cycling: %.2f m/s²</string>
+</resources>

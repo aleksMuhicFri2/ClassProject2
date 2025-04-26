@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        android:key="pref_start_tracking"
+        android:title="Start Tracking"
+        android:summary="Enable tracking for your activities"
+        app:iconSpaceReserved="false"/>
+
+    <EditTextPreference
+        android:key="pref_step_goal"
+        android:title="Step Count Goal"
+        android:defaultValue="2000"
+        android:inputType="number"
+        android:summary="Set your daily step goal"
+        app:iconSpaceReserved="false"/>
+
+    <si.uni_lj.fri.pbd.classproject2.TimePreference
+        android:key="reminder_time"
+        android:title="Reminder Time"
+        android:defaultValue="20:00"
+        app:iconSpaceReserved="false" />
+
+    <Preference
+        android:key="pref_reset_app"
+        android:title="Reset App"
+        android:summary="Delete all historical data"
+        app:iconSpaceReserved="false"/>
+</PreferenceScreen>

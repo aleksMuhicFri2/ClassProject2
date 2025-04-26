@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <!-- Activity Breakdown -->
+    <TextView
+        android:id="@+id/tv_activity_breakdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/dashboard_header"
+        android:textSize="26sp" />
+
+    <si.uni_lj.fri.pbd.classproject2.ui.custom.PieChartView
+        android:id="@+id/pieChartView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:id="@+id/sports_legend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/walking_icon"
+            android:src="@drawable/walking_icon" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/running_icon"
+            android:src="@drawable/running_icon" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/cycling_icon"
+            android:src="@drawable/cycling_icon" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/idle_icon"
+            android:src="@drawable/idle_icon" />
+
+    </LinearLayout>
+
+    <!-- Average Acceleration -->
+    <TextView
+        android:id="@+id/tv_avg_acceleration_running"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/avg_acceleration_running"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_avg_acceleration_cycling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="32dp"
+        android:text="@string/avg_acceleration_cycling"
+        android:textSize="20sp" />
+
+    <!-- Steps Taken -->
+    <TextView
+        android:id="@+id/tv_steps_taken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/steps_taken"
+        android:textSize="28sp" />
+
+</LinearLayout>
