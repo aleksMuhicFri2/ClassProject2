@@ -6,7 +6,7 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import android.util.Log
 
-// Helper worker for ActivityRecognitionReceiver which sends the activity change to SensingService
+// Helper worker for ActivityRecognitionReceiver which sends the activity changes to SensingService
 class ActivityRecognitionWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
 
     override fun doWork(): Result {
