@@ -8,6 +8,6 @@
     <string name="cycling_icon">Cycling</string>
     <string name="idle_icon">Idle</string>
     <string name="steps_taken">Steps Taken: %d</string>
-    <string name="avg_acceleration_running">Average Acceleration Running: %.2f m/s²</string>
-    <string name="avg_acceleration_cycling">Average Acceleration Cycling: %.2f m/s²</string>
+    <string name="avg_acceleration_running">Avg. Accel. Running: %.2f m/s²</string>
+    <string name="avg_acceleration_cycling">Avg. Accel. Cycling: %.2f m/s²</string>
 </resources>

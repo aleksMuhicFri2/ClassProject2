@@ -17,6 +17,7 @@ import androidx.preference.PreferenceManager
 import com.google.android.gms.location.*
 import kotlin.math.sqrt
 import androidx.core.content.edit
+import android.util.Log
 
 // Service that handles activity duration and step counting and sends a notification
 class SensingService : Service(), SensorEventListener {
@@ -128,6 +129,9 @@ class SensingService : Service(), SensorEventListener {
             when (action) {
                 "WALKING", "RUNNING", "CYCLING", "IN_VEHICLE", "STILL" -> {
                     updateCurrentActivity(action)
+                    Log.d("SensingService", "Received intent with action: $action")
+                }
+                else -> { // nothing
                 }
             }
         }

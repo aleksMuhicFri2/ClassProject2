@@ -13,6 +13,7 @@ import androidx.preference.PreferenceManager
 import android.widget.Toast
 import androidx.core.content.edit
 import androidx.preference.EditTextPreference
+import android.util.Log
 
 // Fragment for the settings
 class SettingsFragment : PreferenceFragmentCompat() {
@@ -47,11 +48,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     } else {
                         // Permission already granted → start service
                         ContextCompat.startForegroundService(ctx, svcIntent)
+                        Log.d("SettingsFragment", "Tracking service started")
                         true
                     }
                 } else {
                     // Stop the service
                     ctx.stopService(svcIntent)
+                    Log.d("SettingsFragment", "Tracking service stopped")
                     true
                 }
             }

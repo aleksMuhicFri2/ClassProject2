@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import androidx.preference.DialogPreference
 import si.uni_lj.fri.pbd.classproject2.databinding.DialogTimePreferenceBinding
 import java.util.*
+import android.util.Log
 
 // Helper class for setting the notification time preference in settings -> visually more pleasing
 class TimePreference(context: Context, attrs: AttributeSet?) : DialogPreference(context, attrs) {
@@ -54,6 +55,7 @@ class TimePreference(context: Context, attrs: AttributeSet?) : DialogPreference(
 
             // After the time is updated, re-schedule the reminder with the new time
             scheduleReminder(context, newTime)
+            Log.d("TimePreference", "Reminder scheduled for $newTime")
 
             dialog.dismiss()
         }

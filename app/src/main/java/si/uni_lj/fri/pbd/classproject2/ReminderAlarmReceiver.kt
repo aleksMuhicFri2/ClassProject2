@@ -7,12 +7,14 @@ import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
 import androidx.preference.PreferenceManager
+import android.util.Log
 
 // Sends a notification if the user hasn't reached their step goal
 // Its usually a little late, but always send it within the same minute
 class ReminderAlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
 
+        Log.d("ReminderAlarmReceiver", "Alarm received, checking step count...")
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
         // step count from preferences

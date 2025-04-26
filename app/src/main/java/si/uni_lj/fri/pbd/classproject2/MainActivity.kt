@@ -21,6 +21,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.preference.PreferenceManager
 import si.uni_lj.fri.pbd.classproject2.databinding.ActivityMainBinding
 import java.util.Calendar
+import android.util.Log
 
 // Main activity -> handles navigation and permissions and default data setting
 class MainActivity : AppCompatActivity() {

@@ -38,7 +38,6 @@ class ActivityRecognitionReceiver : BroadcastReceiver() {
                     // Schedule the work for the new activity
                     scheduleActivityTransition(context, activityName)
                 } else if (transitionType == ActivityTransition.ACTIVITY_TRANSITION_EXIT) {
-                    Log.d("ActivityReceiver", "$activityName activity ended.")
                 }
             }
         }
@@ -53,6 +52,5 @@ class ActivityRecognitionReceiver : BroadcastReceiver() {
             .build()
 
         WorkManager.getInstance(context).enqueue(workRequest)
-        Log.d("ActivityReceiver", "Work scheduled for activity: $activityName")
     }
 }
